@@ -36,7 +36,7 @@
 #include<fstream>
 using namespace std;
 
-long helper(string a, string b) {
+long solve(string a, string b) {
     unordered_map<char, int> ac, bc;
     for(int i = 0; i < a.size(); i++) ac[a[i]]++, bc[b[i]]++;
     long score = 0;
@@ -52,7 +52,7 @@ int main() {
     input.open("day3_input.txt");
     string s;
     long ans = 0;
-    while(input >> s) ans += helper(s.substr(0, s.size() / 2), s.substr(s.size() / 2, s.size() / 2));
+    while(input >> s) ans += solve(s.substr(0, s.size() / 2), s.substr(s.size() / 2, s.size() / 2));
     cout << ans << endl;
     return 0;
 }

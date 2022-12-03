@@ -31,7 +31,7 @@
 #include<vector>
 using namespace std;
 
-long helper(vector<string> g) {
+long solve(vector<string> g) {
     unordered_map<char, int> ht;
     for(string s : g){
         unordered_map<char, int> mp;
@@ -54,7 +54,7 @@ int main() {
     long ans = 0;
     while(input >> a >> b >> c) {
         vector<string> g{a, b, c};
-	ans += helper(g);
+	ans += solve(g);
     }
     cout << ans << endl;
     return 0;
