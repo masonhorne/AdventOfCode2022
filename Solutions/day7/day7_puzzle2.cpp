@@ -74,8 +74,7 @@ int main () {
     input.open("day7_input.txt");
     Node *root = parse(input);
     vector<int> dirs;
-    int used = dfs(root, dirs);
-    int target = 30000000 - (70000000 - used);
+    int target = 30000000 - (70000000 - dfs(root, dirs));
     sort(dirs.begin(), dirs.end());
     int ans = 0;
     while(dirs[ans] < target) ans++;
