@@ -451,8 +451,7 @@ int main() {
             k[0].first += xc;
             k[0].second += yc;
             for(int j = 1; j < 10; j++){
-                int diff = abs(k[j - 1].first - k[j].first) + abs(k[j -
-                        1].second - k[j].second);
+                int diff = abs(k[j - 1].first - k[j].first) + abs(k[j - 1].second - k[j].second);
                 if(diff == 2 && abs(k[j - 1].first - k[j].first) != abs(k[j - 1].second - k[j].second)){
                     if(k[j - 1].first != k[j].first) k[j].first += k[j - 1].first > k[j].first ? 1 : -1;
                     else k[j].second += k[j - 1].second > k[j].second ? 1 : -1;
