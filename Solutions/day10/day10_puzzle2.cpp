@@ -135,14 +135,14 @@ int main () {
     vector<string> ans;
     string s, l;
     while(input >> s && c <= 240) {
-        if(abs(x - (c % 40) + 1) <= 1) l += '#';
+        if(abs(x - (c - 1) % 40) <= 1) l += '#';
         else l += '.';
         if(l.size() == 40) ans.push_back(l), l = "";
         if(s == "noop") c++;
         else {
             int a; input >> a;
             c++;
-            if(abs(x - (c % 40) + 1) <= 1) l += '#';
+            if(abs(x - (c - 1) % 40) <= 1) l += '#';
             else l += '.';
             if(l.size() == 40) ans.push_back(l), l = "";
             c++;
