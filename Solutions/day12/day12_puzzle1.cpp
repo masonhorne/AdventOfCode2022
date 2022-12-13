@@ -58,7 +58,6 @@ int main () {
         pair<int, vector<int>> v = pq.top();
         pq.pop();
         int r = v.second[0], c = v.second[1];
-        dis[r][c] = min(dis[r][c], v.first);           
         for(int k = 0; k < 4; k++) {
             int nr = r + dirs[k];
             int nc = c + dirs[k + 1];
