@@ -282,7 +282,8 @@ int main() {
         for(int i = 0; i < mxr; i++){
             for(int j = 0; j < mxc; j++) {
                 vector<int> v = mp[{i, j}];
-                if(v.size() && v[0] != 5){
+                if(v.size() && v[0] == 5) bp[{i, j}] = {5, 5, 5, 5, 5};
+                else if(v.size()){
                     for(int k = 0; k < v.size(); k++){
                         if(v[k] == 1){
                             if(i == 1) bp[{mxr - 2, j}].push_back(1);
@@ -298,7 +299,7 @@ int main() {
                             else bp[{i, j - 1}].push_back(4);
                         }
                     }
-                } else if(v.size()) bp[{i, j}] = {5, 5, 5, 5, 5};
+                } 
             }
         }
         mp = bp;
