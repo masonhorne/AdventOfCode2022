@@ -8,6 +8,8 @@
 
 ### Note that all files read from the provided input file.
 
+![](https://i.imgur.com/4XtvqKi.png)
+
 Try out Advent of Code for yourself here!
 https://adventofcode.com/2022
 
